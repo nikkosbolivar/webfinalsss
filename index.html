@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craving Satisfied</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="cart.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="c:\Users\Nikkos\Downloads\New folder\297570838_827006525334346_6130064341035890064_n.jpg" alt="Craving Satisfied Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#contact-us" onclick="smoothScroll('contact-us')">Contact Us</a></li>
+                    <li><a href="#" onclick="openModal()">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="title">
+            <h1>Craving Satisfied</h1>
+        </div>
+    </header>
+
+    <section id="product" class="container">
+        <div class="product">
+            <h2>Our Products</h2>
+
+            <div class="product-item" id="KitKat">
+                <h3>KitKat</h3>
+                <p>P200</p>
+                <img src="c:\Users\Nikkos\Downloads\img-product-kitkat.jpg" alt="KitKat">
+                <button onclick="addToCart('KitKat','c:\Users\Nikkos\Downloads\img-product-kitkat.jpg', 200)">Add to Cart</button>
+            </div>
+            <div class="product-item" id="Maltesers">
+                <h3>Maltesers</h3>
+                <p>P200</p>
+                <img src="c:\Users\Nikkos\Downloads\img-product-maltesers.jpg" alt="Maltesers">
+                <button onclick="addToCart('Maltesers','c:\Users\Nikkos\Downloads\img-product-maltesers.jpg', 200)">Add to Cart</button>
+            </div>
+            <div class="product-item" id="Matcha">
+                <h3>Matcha</h3>
+                <p>P200</p>
+                <img src="c:\Users\Nikkos\Downloads\New folder\PicsArt_09-27-10.10.08.jpg" alt="Matcha">
+                <button onclick="addToCart('Matcha','c:\Users\Nikkos\Downloads\New folder\PicsArt_09-27-10.10.08.jpg', 200)">Add to Cart</button>
+            </div>
+            <div class="product-item" id="Milo Dalgona">
+                <h3>Milo Dalgona</h3>
+                <p>P200</p>
+                <img src="c:\Users\Nikkos\Downloads\img-product-milo.jpg" alt="Milo Dalgona">
+                <button onclick="addToCart('Milo Dalgona','c:\Users\Nikkos\Downloads\img-product-milo.jpg', 200)">Add to Cart</button>
+            </div>
+            <div class="product-item" id="Salted Caramel">
+                <h3>Salted Caramel</h3>
+                <p>P185</p>
+                <img src="c:\Users\Nikkos\Downloads\New folder\PicsArt_09-26-08.49.24.jpg" alt="Salted Caramel">
+                <button onclick="addToCart('Salted Caramel','c:\Users\Nikkos\Downloads\New folder\PicsArt_09-26-08.49.24.jpg', 185)">Add to Cart</button>
+            </div>
+            <div class="product-item" id="Blueberry">
+                <h3>Blueberry</h3>
+                <p>P185</p>
+                <img src="c:\Users\Nikkos\Downloads\New folder\PicsArt_09-26-08.48.53.jpg" alt="Blueberry">
+                <button onclick="addToCart('Blueberry','c:\Users\Nikkos\Downloads\New folder\PicsArt_09-26-08.48.53.jpg', 185)">Add to Cart</button>
+            </div>
+            <div class="product-item" id="Strawberry">
+                <h3>Strawberry</h3>
+                <p>P185</p>
+                <img src="c:\Users\Nikkos\Downloads\New folder\PicsArt_09-26-08.51.11.jpg" alt="Strawberry">
+                <button onclick="addToCart('Strawberry','c:\Users\Nikkos\Downloads\New folder\PicsArt_09-26-08.51.11.jpg', 185)">Add to Cart</button>
+            </div>
+        
+    </section>
+
+    <section id="contact-us" class="container contacts">
+        <h2>Contact Us</h2>
+        <p>+63 9683920475</p>
+        <p>NHA Aglipay St. Mandaluyong City</p>
+        <p>Follow us on our Social Media:</p>
+        <div class="social-media">
+            <a class="instagram-link" href="https://www.instagram.com/craviiingssatisfied/" target="_blank">
+                <img src="c:\Users\Nikkos\Downloads\img-logo-instagram.jpg" alt="Instagram">
+            </a>
+            <a class="facebook-link" href="https://www.facebook.com/craviiingssatisfied" target="_blank">
+                <img src="c:\Users\Nikkos\Downloads\facebook.jpg" alt="Facebook">
+            </a>
+        </div>
+    </section>
+
+    <section id="cart" class="container">
+        <h2 id="cart-heading">Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="fillup">
+                <h2>Register</h2>
+                <form id="registration-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="usernameDisplay" class="username-display"></div>
+</body>
+</html>
